@@ -1,0 +1,65 @@
+1. Test case: complete coupling
+
+# dimensionless constants for atmosphere
+Ro_a = Constant(1) # Rossby number
+Re_a = Constant(10) # Reynolds number
+Pe_a = Constant(10) # Peclet number
+
+# dimensionless constants for ocean
+Ro_o = Constant(1) # Rossby number
+Re_o = Constant(100) # Reynolds number
+Pe_o = Constant(1000) # Peclet number
+
+# coupling coefficients
+gamma = -1
+sigma = -1
+
+# initial conditions
+To = 3000 + 50*bell_function
+Ta = 3000
+uo = [0,0]
+ua = [0,0]
+
+2. Test case: velocity coupling 1
+
+# dimensionless constants for atmosphere
+Ro_a = Constant(1) # Rossby number
+Re_a = Constant(100) # Reynolds number
+Pe_a = Constant(100) # Peclet number
+
+# dimensionless constants for ocean
+Ro_o = Constant(1) # Rossby number
+Re_o = Constant(1000) # Reynolds number
+Pe_o = Constant(10000) # Peclet number
+
+# coupling coefficients
+gamma = -1
+sigma = -1
+
+# initial conditions
+To = 3000
+Ta = 3000
+uo = [0,0]
+ua = [sin(2*pi*y), 0]
+
+2. Test case: velocity coupling 2
+
+# dimensionless constants for atmosphere
+Ro_a = Constant(1) # Rossby number
+Re_a = Constant(100) # Reynolds number
+Pe_a = Constant(100) # Peclet number
+
+# dimensionless constants for ocean
+Ro_o = Constant(1) # Rossby number
+Re_o = Constant(1000) # Reynolds number
+Pe_o = Constant(10000) # Peclet number
+
+# coupling coefficients
+gamma = -1
+sigma = -1
+
+# initial conditions
+To = 3000
+Ta = 3000
+uo = [0,0]
+ua = [sin(2*pi*x), 0]
